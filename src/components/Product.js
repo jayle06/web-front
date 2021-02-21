@@ -4,19 +4,22 @@ import '../css/Product.css';
 function Product({id, title, image, price, rating}) {
     return (
         <div className="product">
-            <p>{title}</p>
-            <p className="product__price">
-                <strong>{price}</strong>
-                <small>vnd</small>
-            </p>
-            <div className="product__rating">
-                {Array(rating)
-                    .fill()
-                    .map((_)=> (
-                        <p>:star:</p>
-                    ))}
+            <div className="product__info">
+                <p>{title}</p>
+                <p className="product__price">
+                    <strong>{price}</strong>
+                    <small>vnd</small>
+                </p>
+                <div className="product__rating">
+                    {Array(rating)
+                        .fill()
+                        .map((_)=> (
+                            <p>⭐</p>
+                        ))}
+                </div>
             </div>
-            <img className="product__" src={image} alt="product"/>
+            <img src={image} alt="product"/>
+            <button>Add to basket</button>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './images/white-logo.png';
-import './Header.css';
+import logo from '../images/white-logo.png';
+import '../css/Header.css';
 import {Link} from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
@@ -44,7 +44,7 @@ function Header() {
                 <Link to="/checkout" className="header__link">
                     <div className="header__optionBasket">
                         <LocalMallIcon />
-                        <span>0</span>
+                        <span className="header__optionLineTwo header__basketCount">0</span>
                     </div>
                 </Link>
             </div>
